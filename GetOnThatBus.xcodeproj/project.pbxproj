@@ -14,6 +14,7 @@
 		0827C4FB2A462E5C00AB4984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0827C4FA2A462E5C00AB4984 /* Assets.xcassets */; };
 		0827C4FE2A462E5C00AB4984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0827C4FC2A462E5C00AB4984 /* LaunchScreen.storyboard */; };
 		0827C5062A4634B300AB4984 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827C5052A4634B300AB4984 /* SwiftyJSON.swift */; };
+		0827C5082A46397300AB4984 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827C5072A46397300AB4984 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0827C4FD2A462E5C00AB4984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0827C4FF2A462E5C00AB4984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0827C5052A4634B300AB4984 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		0827C5072A46397300AB4984 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				0827C4F12A462E5B00AB4984 /* AppDelegate.swift */,
 				0827C4F32A462E5B00AB4984 /* SceneDelegate.swift */,
 				0827C4F52A462E5B00AB4984 /* ViewController.swift */,
+				0827C5072A46397300AB4984 /* DetailViewController.swift */,
 				0827C4F72A462E5B00AB4984 /* Main.storyboard */,
 				0827C4FA2A462E5C00AB4984 /* Assets.xcassets */,
 				0827C4FC2A462E5C00AB4984 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				0827C4F62A462E5B00AB4984 /* ViewController.swift in Sources */,
 				0827C4F22A462E5B00AB4984 /* AppDelegate.swift in Sources */,
+				0827C5082A46397300AB4984 /* DetailViewController.swift in Sources */,
 				0827C4F42A462E5B00AB4984 /* SceneDelegate.swift in Sources */,
 				0827C5062A4634B300AB4984 /* SwiftyJSON.swift in Sources */,
 			);

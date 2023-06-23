@@ -34,11 +34,71 @@
                     <navigationItem key="navigationItem" id="mxM-ex-17Y"/>
                     <connections>
                         <outlet property="mapView" destination="dv6-Li-9RA" id="hRr-MP-Nd2"/>
+                        <segue destination="OPs-B1-cle" kind="show" identifier="SegueToDetailVC" id="tGy-PQ-RHL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970.2290076335878" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Xq3-4m-7F5">
+            <objects>
+                <viewController id="OPs-B1-cle" customClass="DetailViewController" customModule="GetOnThatBus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5W-W7-MEb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OT4-w1-yWY">
+                                <rect key="frame" x="0.0" y="103" width="393" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OT4-w1-yWY" secondAttribute="height" multiplier="393:325" id="vKm-nC-gFB"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QK-TG-pqF">
+                                <rect key="frame" x="0.0" y="436" width="393" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9QK-TG-pqF" secondAttribute="height" multiplier="393:103" id="wwh-El-Epb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="routes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXe-9k-6R9">
+                                <rect key="frame" x="0.0" y="547" width="393" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sXe-9k-6R9" secondAttribute="height" multiplier="393:103" id="bSH-uO-tdf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZXp-zB-9UZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9QK-TG-pqF" firstAttribute="trailing" secondItem="ZXp-zB-9UZ" secondAttribute="trailing" id="2RZ-Kg-QXo"/>
+                            <constraint firstItem="OT4-w1-yWY" firstAttribute="top" secondItem="ZXp-zB-9UZ" secondAttribute="top" id="9Tu-8d-W5v"/>
+                            <constraint firstItem="sXe-9k-6R9" firstAttribute="trailing" secondItem="ZXp-zB-9UZ" secondAttribute="trailing" id="AwS-H5-U4H"/>
+                            <constraint firstItem="OT4-w1-yWY" firstAttribute="trailing" secondItem="ZXp-zB-9UZ" secondAttribute="trailing" id="I2r-xT-xrz"/>
+                            <constraint firstItem="sXe-9k-6R9" firstAttribute="leading" secondItem="ZXp-zB-9UZ" secondAttribute="leading" id="IEU-Pq-y5i"/>
+                            <constraint firstItem="9QK-TG-pqF" firstAttribute="top" secondItem="OT4-w1-yWY" secondAttribute="bottom" constant="8" symbolic="YES" id="Q9v-aQ-zOJ"/>
+                            <constraint firstItem="sXe-9k-6R9" firstAttribute="top" secondItem="9QK-TG-pqF" secondAttribute="bottom" constant="8" symbolic="YES" id="SAV-Ri-Cih"/>
+                            <constraint firstItem="9QK-TG-pqF" firstAttribute="leading" secondItem="ZXp-zB-9UZ" secondAttribute="leading" id="fTK-wP-Bmg"/>
+                            <constraint firstItem="OT4-w1-yWY" firstAttribute="leading" secondItem="ZXp-zB-9UZ" secondAttribute="leading" id="vxJ-mk-bf3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kdF-DY-tfg"/>
+                    <connections>
+                        <outlet property="mapView" destination="OT4-w1-yWY" id="i1o-t8-R79"/>
+                        <outlet property="nameLabel" destination="9QK-TG-pqF" id="2VX-1h-HPL"/>
+                        <outlet property="routesLabel" destination="sXe-9k-6R9" id="3kd-LL-CGE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laA-U4-tc7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852.6717557251907" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="snW-th-aYt">

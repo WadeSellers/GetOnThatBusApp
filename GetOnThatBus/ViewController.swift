@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     let locationManager = CLLocationManager()
 
     @IBOutlet weak var mapView: MKMapView!
@@ -18,11 +18,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let apiKey = "?api_key=e13626d03d8e4c03ac07f95541b3091b"
     let region = "&Lat=38.89731&Lon=-77.00626&Radius=2000"
     
+    var selectedAnnotation = MKPointAnnotation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
+        mapView.delegate = self
         
         let url = URL(string: "\(address)\(apiKey)\(region)")!
         DispatchQueue.global().async {
@@ -71,6 +74,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             alert.addAction(UIAlertAction(title: "Ok:", style: .default))
             self.present(alert, animated: true)
         }
+    }
+    
+    // mapView Delegate functions
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        selectedAnnotation = view.annotation as! MKPointAnnotation
+        performSegue(withIdentifier: "SegueToDetailVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! DetailViewController
+        dvc.selectedAnnotation = selectedAnnotation
     }
     
     
